@@ -1,0 +1,7 @@
+playwright
+tenacity
+beautifulsoup4
+pandas
+requests
+# Telegram notification usa requests (sin dependencias extra)
+# python-telegram-bot  # alternativa más completa si la prefieres

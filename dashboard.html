@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustpilot Ratings • Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="diagram.svg" type="image/svg+xml">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .trust-score {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+        }
+
+        .rating-card {
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                       box-shadow 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+        
+        .rating-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .score-bar {
+            height: 6px;
+            background: linear-gradient(to right, #eab308, #22c55e);
+            border-radius: 9999px;
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .status-ok { background-color: #dcfce7; color: #166534; }
+        .status-error { background-color: #fee2e2; color: #991b1b; }
+        .status-no_data { background-color: #fefce8; color: #854d0e; }
+
+        .metric-value {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+    <div class="max-w-screen-xl mx-auto px-6 py-8">
+        <!-- Header -->
+        <div class="flex items-center justify-between mb-10">
+            <div>
+                <div class="flex items-center gap-x-3">
+                    <div class="w-11 h-11 bg-yellow-400 flex items-center justify-center rounded-2xl shadow-inner">
+                        <i class="fa-solid fa-star text-slate-900 text-3xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-4xl tracking-tighter">Trustpilot</h1>
+                        <p class="text-slate-400 text-sm -mt-1">Monitor de Calificaciones</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <div id="last-updated" 
+                     class="px-4 py-2 bg-slate-900 border border-slate-800 rounded-3xl text-sm flex items-center gap-x-2">
+                    <i class="fa-solid fa-sync fa-sm text-emerald-400"></i>
+                    <span class="font-mono text-emerald-400" id="update-time">Cargando...</span>
+                </div>
+                
+                <button onclick="window.location.reload()" 
+                        class="flex items-center gap-x-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 border border-slate-700 transition-colors rounded-3xl text-sm font-medium">
+                    <i class="fa-solid fa-refresh"></i>
+                    <span>Actualizar</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-400 text-sm">Sitios monitoreados</p>
+                        <p id="total-sites" class="text-5xl font-semibold tracking-tighter mt-1 metric-value">—</p>
+                    </div>
+                    <i class="fa-solid fa-globe text-3xl text-slate-700"></i>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-400 text-sm">Con calificación</p>
+                        <p id="successful" class="text-5xl font-semibold tracking-tighter mt-1 text-emerald-400 metric-value">—</p>
+                    </div>
+                    <i class="fa-solid fa-check-circle text-3xl text-emerald-400"></i>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-400 text-sm">Promedio general</p>
+                        <p id="avg-score" class="text-5xl font-semibold tracking-tighter mt-1 text-yellow-400 metric-value">—</p>
+                    </div>
+                    <i class="fa-solid fa-chart-line text-3xl text-yellow-400"></i>
+                </div>
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-400 text-sm">Total reseñas</p>
+                        <p id="total-reviews" class="text-5xl font-semibold tracking-tighter mt-1 metric-value">—</p>
+                    </div>
+                    <i class="fa-solid fa-comments text-3xl text-slate-700"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ratings Grid -->
+        <div class="mb-8">
+            <div class="flex items-center justify-between mb-4 px-1">
+                <h2 class="font-semibold text-xl tracking-tight">Calificaciones actuales</h2>
+                <span id="results-count" class="text-sm text-slate-400"></span>
+            </div>
+            
+            <div id="ratings-grid" 
+                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                <!-- Cards generadas por JS -->
+            </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="font-semibold text-xl tracking-tight">Distribución de TrustScore</h2>
+                    <p class="text-slate-400 text-sm">Comparativa actual de todos los sitios</p>
+                </div>
+            </div>
+            
+            <div class="h-80">
+                <canvas id="score-chart"></canvas>
+            </div>
+        </div>
+
+        <footer class="mt-12 text-center text-xs text-slate-500">
+            Datos actualizados automáticamente • 
+            <a href="https://github.com/" class="hover:text-slate-400 transition-colors">Ver en GitHub</a>
+        </footer>
+    </div>
+
+    <script>
+        let chartInstance = null;
+
+        async function loadData() {
+            try {
+                const response = await fetch('output/latest_ratings.json');
+                if (!response.ok) throw new Error('No se pudo cargar latest_ratings.json');
+                
+                const data = await response.json();
+                renderDashboard(data);
+            } catch (error) {
+                console.error(error);
+                document.getElementById('ratings-grid').innerHTML = `
+                    <div class="col-span-full bg-red-950/50 border border-red-900 rounded-3xl p-8 text-center">
+                        <i class="fa-solid fa-exclamation-triangle text-red-400 text-4xl mb-4"></i>
+                        <p class="text-red-400">No se pudo cargar <code>latest_ratings.json</code></p>
+                        <p class="text-sm text-red-300/70 mt-1">Asegúrate de que el archivo esté en la misma carpeta que este dashboard.</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderDashboard(data) {
+            // Actualizar header
+            const updateEl = document.getElementById('update-time');
+            if (data.last_updated) {
+                const date = new Date(data.last_updated);
+                updateEl.textContent = date.toLocaleString('es-CO', { 
+                    month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' 
+                });
+            }
+
+            // Stats generales
+            document.getElementById('total-sites').textContent = data.total_sites || 0;
+            document.getElementById('successful').textContent = data.successful || 0;
+            
+            const ratings = data.ratings || [];
+            const successfulRatings = ratings.filter(r => r.trust_score !== null);
+            
+            // Promedio
+            let avg = 0;
+            if (successfulRatings.length > 0) {
+                avg = successfulRatings.reduce((sum, r) => sum + (r.trust_score || 0), 0) / successfulRatings.length;
+            }
+            document.getElementById('avg-score').textContent = avg.toFixed(1);
+            
+            // Total reseñas
+            const totalReviews = successfulRatings.reduce((sum, r) => sum + (r.numero_reviews || 0), 0);
+            document.getElementById('total-reviews').textContent = totalReviews.toLocaleString('es-CO');
+            
+            document.getElementById('results-count').textContent = `${ratings.length} sitios`;
+
+            // Renderizar tarjetas
+            renderCards(ratings);
+            
+            // Renderizar gráfico
+            renderChart(ratings);
+        }
+
+        function renderCards(ratings) {
+            const container = document.getElementById('ratings-grid');
+            container.innerHTML = '';
+
+            if (ratings.length === 0) {
+                container.innerHTML = `<p class="col-span-full text-center text-slate-400 py-8">No hay datos disponibles.</p>`;
+                return;
+            }
+
+            ratings.forEach(rating => {
+                const score = rating.trust_score;
+                const hasScore = score !== null && score !== undefined;
+                
+                let statusClass = 'status-no_data';
+                let statusText = 'Sin datos';
+                
+                if (rating.status === 'ok' && hasScore) {
+                    statusClass = 'status-ok';
+                    statusText = 'Actualizado';
+                } else if (rating.status === 'error') {
+                    statusClass = 'status-error';
+                    statusText = 'Error';
+                }
+
+                const scoreColor = hasScore 
+                    ? (score >= 4.0 ? 'text-emerald-400' : score >= 3.0 ? 'text-yellow-400' : 'text-orange-400')
+                    : 'text-slate-500';
+
+                const cardHTML = `
+                    <div class="rating-card bg-slate-900 border border-slate-800 rounded-3xl p-6 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="min-w-0 flex-1">
+                                <div class="font-semibold text-lg tracking-tight truncate">${rating.nombre || rating.domain}</div>
+                                <div class="text-xs text-slate-400 font-mono truncate">${rating.domain}</div>
+                            </div>
+                            
+                            <div class="px-3 py-1 rounded-2xl text-xs font-medium ${statusClass} whitespace-nowrap">
+                                ${statusText}
+                            </div>
+                        </div>
+
+                        <div class="flex-1 flex items-end justify-between mt-auto">
+                            <div>
+                                ${hasScore ? `
+                                    <div class="flex items-baseline gap-x-1">
+                                        <span class="trust-score ${scoreColor}">${score}</span>
+                                        <span class="text-slate-400 text-sm">/ 5</span>
+                                    </div>
+                                    <div class="text-xs text-slate-400 mt-0.5">
+                                        ${rating.numero_reviews ? rating.numero_reviews.toLocaleString('es-CO') + ' reseñas' : ''}
+                                    </div>
+                                ` : `
+                                    <div class="text-slate-400 text-sm py-1">Sin calificación disponible</div>
+                                `}
+                            </div>
+
+                            ${hasScore ? `
+                                <div class="text-right">
+                                    <div class="w-14 h-14 rounded-full border-[6px] flex items-center justify-center relative"
+                                         style="border-color: ${score >= 4 ? '#4ade80' : score >= 3 ? '#facc15' : '#fb923c'}20; border-top-color: ${score >= 4 ? '#4ade80' : score >= 3 ? '#facc15' : '#fb923c'}">
+                                        <span class="font-mono text-lg font-semibold">${score}</span>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <div class="mt-5 pt-4 border-t border-slate-800 text-[10px] text-slate-500 flex justify-between items-center">
+                            <span>${rating.last_checked ? new Date(rating.last_checked).toLocaleDateString('es-CO', {month:'short', day:'numeric'}) : ''}</span>
+                            <a href="${rating.url}" target="_blank" 
+                               class="flex items-center gap-x-1 hover:text-yellow-400 transition-colors">
+                                <span>Ver en Trustpilot</span>
+                                <i class="fa-solid fa-external-link-alt text-[9px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        function renderChart(ratings) {
+            const ctx = document.getElementById('score-chart');
+            
+            if (chartInstance) {
+                chartInstance.destroy();
+            }
+
+            const validRatings = ratings
+                .filter(r => r.trust_score !== null)
+                .sort((a, b) => b.trust_score - a.trust_score);
+
+            const labels = validRatings.map(r => r.domain.length > 18 ? r.domain.substring(0, 16) + '…' : r.domain);
+            const scores = validRatings.map(r => r.trust_score);
+            const colors = scores.map(score => 
+                score >= 4.0 ? '#4ade80' : 
+                score >= 3.5 ? '#facc15' : 
+                score >= 3.0 ? '#fb923c' : '#f87171'
+            );
+
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'TrustScore',
+                        data: scores,
+                        backgroundColor: colors,
+                        borderColor: colors,
+                        borderWidth: 0,
+                        borderRadius: 6,
+                        barThickness: 18
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => `${ctx.raw} / 5`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: '#334155', drawBorder: false },
+                            ticks: { color: '#64748b', font: { size: 11 } }
+                        },
+                        y: {
+                            min: 0,
+                            max: 5,
+                            grid: { color: '#334155', drawBorder: false },
+                            ticks: { 
+                                color: '#64748b', 
+                                stepSize: 1,
+                                font: { size: 11 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Cargar al iniciar
+        window.onload = loadData;
+        
+        // Auto-recargar cada 5 minutos (útil si lo dejas abierto)
+        setInterval(() => {
+            console.log('%c[Dashboard] Auto-refreshing data...', 'color:#64748b');
+            loadData();
+        }, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

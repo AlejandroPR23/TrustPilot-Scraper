@@ -1,0 +1,255 @@
+2026-06-30 20:13:43 | INFO     | ============================================================
+2026-06-30 20:13:43 | INFO     | Trustpilot Scraper iniciado
+2026-06-30 20:13:43 | INFO     | ============================================================
+2026-06-30 20:13:43 | ERROR    | No existe el archivo: input_urls.csv
+2026-06-30 20:13:59 | INFO     | ============================================================
+2026-06-30 20:13:59 | INFO     | Trustpilot Scraper iniciado
+2026-06-30 20:13:59 | INFO     | ============================================================
+2026-06-30 20:13:59 | INFO     | Cargadas 4 URLs activas desde input_urls_example.csv
+2026-06-30 20:15:57 | INFO     | ============================================================
+2026-06-30 20:15:57 | INFO     | Trustpilot Scraper iniciado
+2026-06-30 20:15:57 | INFO     | ============================================================
+2026-06-30 20:15:57 | INFO     | Cargadas 4 URLs activas desde input_urls_example.csv
+2026-06-30 20:15:58 | INFO     | [1/4]
+2026-06-30 20:15:58 | INFO     | Procesando: https://www.trustpilot.com/review/amazon.com
+2026-06-30 20:16:11 | INFO     |   ✓ OK → 1.7 (47060 reseñas)
+2026-06-30 20:16:24 | INFO     | [2/4]
+2026-06-30 20:16:24 | INFO     | Procesando: https://www.trustpilot.com/review/booking.com
+2026-06-30 20:16:32 | INFO     |   ✓ OK → 1.6 (120362 reseñas)
+2026-06-30 20:16:44 | INFO     | [3/4]
+2026-06-30 20:16:44 | INFO     | Procesando: https://www.trustpilot.com/review/www.google.com
+2026-06-30 20:16:50 | INFO     |   ✓ OK → 2.3 (10027 reseñas)
+2026-06-30 20:17:02 | INFO     | [4/4]
+2026-06-30 20:17:02 | INFO     | Procesando: https://www.trustpilot.com/review/trustpilot.com
+2026-06-30 20:17:07 | INFO     |   ✓ OK → 4.4 (511666 reseñas)
+2026-06-30 20:17:07 | INFO     | Histórico actualizado: output\history.csv (4 nuevos registros)
+2026-06-30 20:17:07 | INFO     | JSON generado para GitHub Pages: output\latest_ratings.json
+2026-06-30 20:17:07 | INFO     |   → successful: 4/4
+2026-06-30 20:17:07 | INFO     | ============================================================
+2026-06-30 20:17:07 | INFO     | Proceso completado exitosamente
+2026-06-30 20:17:07 | INFO     | Resultados en: output
+2026-06-30 20:17:07 | INFO     |   - history.csv          → Histórico completo
+2026-06-30 20:17:07 | INFO     |   - latest_ratings.json  → Para GitHub Pages (usa este)
+2026-06-30 20:17:07 | INFO     | ============================================================
+2026-06-30 20:26:45 | INFO     | ============================================================
+2026-06-30 20:26:45 | INFO     | Trustpilot Scraper iniciado
+2026-06-30 20:26:45 | INFO     | ============================================================
+2026-06-30 20:26:45 | INFO     | Cargadas 46 URLs activas desde input_urls_example.csv
+2026-06-30 20:26:51 | INFO     | [1/46]
+2026-06-30 20:26:51 | INFO     | Procesando: https://www.trustpilot.com/review/2captcha
+2026-06-30 20:27:03 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/2captcha
+2026-06-30 20:27:12 | INFO     | [2/46]
+2026-06-30 20:27:12 | INFO     | Procesando: https://www.trustpilot.com/review/5-surveys
+2026-06-30 20:27:16 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/5-surveys
+2026-06-30 20:27:26 | INFO     | [3/46]
+2026-06-30 20:27:26 | INFO     | Procesando: https://www.trustpilot.com/review/apps-de-cajas-ruleta-diaria-tipo-cash-giraffe-big-time-cash
+2026-06-30 20:27:30 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/apps-de-cajas-ruleta-diaria-tipo-cash-giraffe-big-time-cash
+2026-06-30 20:27:41 | INFO     | [4/46]
+2026-06-30 20:27:41 | INFO     | Procesando: https://www.trustpilot.com/review/attapoll
+2026-06-30 20:27:45 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/attapoll
+2026-06-30 20:27:53 | INFO     | [5/46]
+2026-06-30 20:27:53 | INFO     | Procesando: https://www.trustpilot.com/review/babel-audios
+2026-06-30 20:27:57 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/babel-audios
+2026-06-30 20:28:11 | INFO     | [6/46]
+2026-06-30 20:28:11 | INFO     | Procesando: https://www.trustpilot.com/review/branded-surveys
+2026-06-30 20:28:14 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/branded-surveys
+2026-06-30 20:28:23 | INFO     | [7/46]
+2026-06-30 20:28:23 | INFO     | Procesando: https://www.trustpilot.com/review/cashwalk
+2026-06-30 20:28:27 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/cashwalk
+2026-06-30 20:28:39 | INFO     | [8/46]
+2026-06-30 20:28:39 | INFO     | Procesando: https://www.trustpilot.com/review/clickworker
+2026-06-30 20:28:43 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/clickworker
+2026-06-30 20:28:50 | INFO     | [9/46]
+2026-06-30 20:28:50 | INFO     | Procesando: https://www.trustpilot.com/review/earnapp
+2026-06-30 20:28:53 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/earnapp
+2026-06-30 20:29:04 | INFO     | [10/46]
+2026-06-30 20:29:04 | INFO     | Procesando: https://www.trustpilot.com/review/evidation
+2026-06-30 20:29:09 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/evidation
+2026-06-30 20:29:22 | INFO     | [11/46]
+2026-06-30 20:29:22 | INFO     | Procesando: https://www.trustpilot.com/review/fiver
+2026-06-30 20:29:25 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/fiver
+2026-06-30 20:29:36 | INFO     | [12/46]
+2026-06-30 20:29:36 | INFO     | Procesando: https://www.trustpilot.com/review/foap
+2026-06-30 20:29:40 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/foap
+2026-06-30 20:29:47 | INFO     | [13/46]
+2026-06-30 20:29:47 | INFO     | Procesando: https://www.trustpilot.com/review/freecash
+2026-06-30 20:29:51 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/freecash
+2026-06-30 20:30:02 | INFO     | [14/46]
+2026-06-30 20:30:02 | INFO     | Procesando: https://www.trustpilot.com/review/google-opinion-rewards
+2026-06-30 20:30:08 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/google-opinion-rewards
+2026-06-30 20:30:19 | INFO     | [15/46]
+2026-06-30 20:30:19 | INFO     | Procesando: https://www.trustpilot.com/review/greatshort
+2026-06-30 20:30:24 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/greatshort
+2026-06-30 20:30:33 | INFO     | [16/46]
+2026-06-30 20:30:33 | INFO     | Procesando: https://www.trustpilot.com/review/growdgen
+2026-06-30 20:30:38 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/growdgen
+2026-06-30 20:30:45 | INFO     | [17/46]
+2026-06-30 20:30:45 | INFO     | Procesando: https://www.trustpilot.com/review/heycash
+2026-06-30 20:30:51 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/heycash
+2026-06-30 20:31:02 | INFO     | [18/46]
+2026-06-30 20:31:02 | INFO     | Procesando: https://www.trustpilot.com/review/honeygain
+2026-06-30 20:31:08 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/honeygain
+2026-06-30 20:31:14 | INFO     | [19/46]
+2026-06-30 20:31:14 | INFO     | Procesando: https://www.trustpilot.com/review/inbox-dollar-earn-dollars
+2026-06-30 20:31:19 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/inbox-dollar-earn-dollars
+2026-06-30 21:39:54 | INFO     | ============================================================
+2026-06-30 21:39:54 | INFO     | Trustpilot Scraper iniciado
+2026-06-30 21:39:54 | INFO     | ============================================================
+2026-06-30 21:39:54 | INFO     | Cargadas 48 URLs activas desde input_urls_example.csv
+2026-06-30 21:40:02 | INFO     | [1/48]
+2026-06-30 21:40:02 | INFO     | Procesando: https://www.trustpilot.com/review/2captcha.com
+2026-06-30 21:40:27 | ERROR    |   ✗ Timeout en https://www.trustpilot.com/review/2captcha.com
+2026-06-30 21:40:31 | INFO     | Procesando: https://www.trustpilot.com/review/2captcha.com
+2026-06-30 21:40:37 | INFO     |   ✓ OK → 4.0 (2655 reseñas)
+2026-06-30 21:40:48 | INFO     | [2/48]
+2026-06-30 21:40:48 | INFO     | Procesando: https://www.trustpilot.com/review/5surveys.com
+2026-06-30 21:40:53 | INFO     |   ✓ OK → 1.5 (137 reseñas)
+2026-06-30 21:41:05 | INFO     | [3/48]
+2026-06-30 21:41:05 | INFO     | Procesando: https://www.trustpilot.com/review/cashgiraffe.com
+2026-06-30 21:41:11 | INFO     |   ✓ OK → 4.5 (1304 reseñas)
+2026-06-30 21:41:23 | INFO     | [4/48]
+2026-06-30 21:41:23 | INFO     | Procesando: https://www.trustpilot.com/review/attapoll.app
+2026-06-30 21:41:28 | INFO     |   ✓ OK → 2.2 (236 reseñas)
+2026-06-30 21:41:35 | INFO     | [5/48]
+2026-06-30 21:41:35 | INFO     | Procesando: https://www.trustpilot.com/review/babel.audio
+2026-06-30 21:41:41 | INFO     |   ✓ OK → 3.9 (92 reseñas)
+2026-06-30 21:41:52 | INFO     | [6/48]
+2026-06-30 21:41:52 | INFO     | Procesando: https://www.trustpilot.com/review/surveys.gobranded.com
+2026-06-30 21:41:58 | INFO     |   ✓ OK → 4.2 (121104 reseñas)
+2026-06-30 21:42:11 | INFO     | [7/48]
+2026-06-30 21:42:11 | INFO     | Procesando: https://www.trustpilot.com/review/cashwalk.us
+2026-06-30 21:42:17 | INFO     |   ✓ OK → 1.5 (85 reseñas)
+2026-06-30 21:42:28 | INFO     | [8/48]
+2026-06-30 21:42:28 | INFO     | Procesando: https://www.trustpilot.com/review/clickworker.com
+2026-06-30 21:42:33 | INFO     |   ✓ OK → 2.6 (3129 reseñas)
+2026-06-30 21:42:44 | INFO     | [9/48]
+2026-06-30 21:42:44 | INFO     | Procesando: https://www.trustpilot.com/review/earnapp.com
+2026-06-30 21:42:49 | INFO     |   ✓ OK → 4.3 (825 reseñas)
+2026-06-30 21:43:01 | INFO     | [10/48]
+2026-06-30 21:43:01 | INFO     | Procesando: https://www.trustpilot.com/review/evidation.com
+2026-06-30 21:43:07 | INFO     |   ✓ OK → 2.0 (13 reseñas)
+2026-06-30 21:43:13 | INFO     | [11/48]
+2026-06-30 21:43:13 | INFO     | Procesando: https://www.trustpilot.com/review/www.fiverr.com
+2026-06-30 21:43:19 | INFO     |   ✓ OK → 2.4 (14723 reseñas)
+2026-06-30 21:43:27 | INFO     | [12/48]
+2026-06-30 21:43:27 | INFO     | Procesando: https://www.trustpilot.com/review/www.foap.com
+2026-06-30 21:43:32 | INFO     |   ✓ OK → 2.6 (48 reseñas)
+2026-06-30 21:43:44 | INFO     | [13/48]
+2026-06-30 21:43:44 | INFO     | Procesando: https://www.trustpilot.com/review/freecash.com
+2026-06-30 21:43:49 | INFO     |   ✓ OK → 4.7 (294737 reseñas)
+2026-06-30 21:43:59 | INFO     | [14/48]
+2026-06-30 21:43:59 | INFO     | Procesando: https://www.trustpilot.com/review/googleopinionrewards.page.link
+2026-06-30 21:44:04 | INFO     |   ✓ OK → 3.0 (2 reseñas)
+2026-06-30 21:44:13 | INFO     | [15/48]
+2026-06-30 21:44:13 | INFO     | Procesando: https://www.trustpilot.com/review/www.great-short.com
+2026-06-30 21:44:18 | INFO     |   ✓ OK → 2.9 (2 reseñas)
+2026-06-30 21:44:26 | INFO     | [16/48]
+2026-06-30 21:44:26 | INFO     | Procesando: https://www.trustpilot.com/review/crowdgen.com
+2026-06-30 21:44:32 | INFO     |   ✓ OK → 1.5 (114 reseñas)
+2026-06-30 21:44:39 | INFO     | [17/48]
+2026-06-30 21:44:39 | INFO     | Procesando: https://www.trustpilot.com/review/heycash.com
+2026-06-30 21:44:44 | INFO     |   ✓ OK → 3.9 (7856 reseñas)
+2026-06-30 21:44:57 | INFO     | [18/48]
+2026-06-30 21:44:57 | INFO     | Procesando: https://www.trustpilot.com/review/honeygain.com
+2026-06-30 21:45:02 | INFO     |   ✓ OK → 4.5 (22451 reseñas)
+2026-06-30 21:45:13 | INFO     | [19/48]
+2026-06-30 21:45:13 | INFO     | Procesando: https://www.trustpilot.com/review/inbox-dollar-earn-dollars
+2026-06-30 21:45:18 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/inbox-dollar-earn-dollars
+2026-06-30 21:45:25 | INFO     | [20/48]
+2026-06-30 21:45:25 | INFO     | Procesando: https://www.trustpilot.com/review/www.inboxdollars.com
+2026-06-30 21:45:31 | INFO     |   ✓ OK → 3.9 (47537 reseñas)
+2026-06-30 21:45:40 | INFO     | [21/48]
+2026-06-30 21:45:40 | INFO     | Procesando: https://www.trustpilot.com/review/jumptask.io
+2026-06-30 21:45:48 | INFO     |   ✓ OK → 4.2 (5729 reseñas)
+2026-06-30 21:45:56 | INFO     | [22/48]
+2026-06-30 21:45:56 | INFO     | Procesando: https://www.trustpilot.com/review/justplayapps.com?stars=1
+2026-06-30 21:46:03 | INFO     |   ✓ OK → 3.5 (1994 reseñas)
+2026-06-30 21:46:09 | INFO     | [23/48]
+2026-06-30 21:46:09 | INFO     | Procesando: https://www.trustpilot.com/review/microsoftrewards.com
+2026-06-30 21:46:16 | INFO     |   ✓ OK → 1.6 (156 reseñas)
+2026-06-30 21:46:23 | INFO     | [24/48]
+2026-06-30 21:46:23 | INFO     | Procesando: https://www.trustpilot.com/review/mistplay.com
+2026-06-30 21:46:28 | INFO     |   ✓ OK → 4.1 (4989 reseñas)
+2026-06-30 21:46:40 | INFO     | [25/48]
+2026-06-30 21:46:40 | INFO     | Procesando: https://www.trustpilot.com/review/www.mobilexpression.com
+2026-06-30 21:46:46 | INFO     |   ✓ OK → 1.9 (327 reseñas)
+2026-06-30 21:46:57 | INFO     | [26/48]
+2026-06-30 21:46:57 | INFO     | Procesando: https://www.trustpilot.com/review/www.mypoints.com
+2026-06-30 21:47:02 | INFO     |   ✓ OK → 4.2 (25994 reseñas)
+2026-06-30 21:47:12 | INFO     | [27/48]
+2026-06-30 21:47:12 | INFO     | Procesando: https://www.trustpilot.com/review/neevo.ai
+2026-06-30 21:47:17 | INFO     |   ✓ OK → 1.9 (832 reseñas)
+2026-06-30 21:47:27 | INFO     | [28/48]
+2026-06-30 21:47:27 | INFO     | Procesando: https://www.trustpilot.com/review/nielsen.com
+2026-06-30 21:47:32 | INFO     |   ✓ OK → 3.7 (709 reseñas)
+2026-06-30 21:47:39 | INFO     | [29/48]
+2026-06-30 21:47:39 | INFO     | Procesando: https://www.trustpilot.com/review/outlier.ai
+2026-06-30 21:47:44 | INFO     |   ✓ OK → 3.9 (4395 reseñas)
+2026-06-30 21:47:58 | INFO     | [30/48]
+2026-06-30 21:47:58 | INFO     | Procesando: https://www.trustpilot.com/review/pawns.app
+2026-06-30 21:48:03 | INFO     |   ✓ OK → 4.4 (8412 reseñas)
+2026-06-30 21:48:13 | INFO     | [31/48]
+2026-06-30 21:48:13 | INFO     | Procesando: https://www.trustpilot.com/review/pineconeresearch.com
+2026-06-30 21:48:18 | INFO     |   ✓ OK → 1.2 (333 reseñas)
+2026-06-30 21:48:26 | INFO     | [32/48]
+2026-06-30 21:48:26 | INFO     | Procesando: https://www.trustpilot.com/review/playtestcloud.com
+2026-06-30 21:48:31 | INFO     |   ✓ OK → 4.3 (173 reseñas)
+2026-06-30 21:48:39 | INFO     | [33/48]
+2026-06-30 21:48:39 | INFO     | Procesando: https://www.trustpilot.com/review/prizerebel.com
+2026-06-30 21:48:45 | INFO     |   ✓ OK → 3.8 (772 reseñas)
+2026-06-30 21:48:57 | INFO     | [34/48]
+2026-06-30 21:48:57 | INFO     | Procesando: https://www.trustpilot.com/review/www.prolific.com
+2026-06-30 21:49:22 | ERROR    |   ✗ Timeout en https://www.trustpilot.com/review/www.prolific.com
+2026-06-30 21:49:26 | INFO     | Procesando: https://www.trustpilot.com/review/www.prolific.com
+2026-06-30 21:49:31 | INFO     |   ✓ OK → 4.5 (14536 reseñas)
+2026-06-30 21:49:39 | INFO     | [35/48]
+2026-06-30 21:49:39 | INFO     | Procesando: https://www.trustpilot.com/review/remotasks.com
+2026-06-30 21:49:46 | INFO     |   ✓ OK → 2.2 (780 reseñas)
+2026-06-30 21:49:53 | INFO     | [36/48]
+2026-06-30 21:49:53 | INFO     | Procesando: https://www.trustpilot.com/review/respondent.io
+2026-06-30 21:49:58 | INFO     |   ✓ OK → 4.1 (1221 reseñas)
+2026-06-30 21:50:06 | INFO     | [37/48]
+2026-06-30 21:50:06 | INFO     | Procesando: https://www.trustpilot.com/review/www.rws.com
+2026-06-30 21:50:11 | INFO     |   ✓ OK → 1.9 (44 reseñas)
+2026-06-30 21:50:23 | INFO     | [38/48]
+2026-06-30 21:50:23 | INFO     | Procesando: https://www.trustpilot.com/review/papaya.com
+2026-06-30 21:50:27 | INFO     |   ✓ OK → 1.9 (13 reseñas)
+2026-06-30 21:50:37 | INFO     | [39/48]
+2026-06-30 21:50:37 | INFO     | Procesando: https://www.trustpilot.com/review/www.surveyjunkie.com
+2026-06-30 21:50:43 | INFO     |   ✓ OK → 3.5 (44923 reseñas)
+2026-06-30 21:50:55 | INFO     | [40/48]
+2026-06-30 21:50:55 | INFO     | Procesando: https://www.trustpilot.com/review/www.swagbucks.com
+2026-06-30 21:51:00 | INFO     |   ✓ OK → 4.1 (43183 reseñas)
+2026-06-30 21:51:13 | INFO     | [41/48]
+2026-06-30 21:51:13 | INFO     | Procesando: https://www.trustpilot.com/review/uber-ai-scalated-solutions
+2026-06-30 21:51:17 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/uber-ai-scalated-solutions
+2026-06-30 21:51:29 | INFO     | [42/48]
+2026-06-30 21:51:29 | INFO     | Procesando: https://www.trustpilot.com/review/ugc-creator
+2026-06-30 21:51:34 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/ugc-creator
+2026-06-30 21:51:45 | INFO     | [43/48]
+2026-06-30 21:51:45 | INFO     | Procesando: https://www.trustpilot.com/review/userinterviews.com
+2026-06-30 21:51:49 | INFO     |   ✓ OK → 3.8 (1204 reseñas)
+2026-06-30 21:52:02 | INFO     | [44/48]
+2026-06-30 21:52:02 | INFO     | Procesando: https://www.trustpilot.com/review/usertesting.com
+2026-06-30 21:52:06 | INFO     |   ✓ OK → 4.5 (3420 reseñas)
+2026-06-30 21:52:20 | INFO     | [45/48]
+2026-06-30 21:52:20 | INFO     | Procesando: https://www.trustpilot.com/review/walkify
+2026-06-30 21:52:24 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/walkify
+2026-06-30 21:52:33 | INFO     | [46/48]
+2026-06-30 21:52:33 | INFO     | Procesando: https://www.trustpilot.com/review/winwalk
+2026-06-30 21:52:36 | WARNING  |   ⚠ No se pudo extraer rating de https://www.trustpilot.com/review/winwalk
+2026-06-30 21:52:42 | INFO     | [47/48]
+2026-06-30 21:52:42 | INFO     | Procesando: https://www.trustpilot.com/review/winwink.co.uk
+2026-06-30 21:52:46 | INFO     |   ✓ OK → 4.8 (1607 reseñas)
+2026-06-30 21:52:53 | INFO     | [48/48]
+2026-06-30 21:52:53 | INFO     | Procesando: https://www.trustpilot.com/review/yougov.com
+2026-06-30 21:52:57 | INFO     |   ✓ OK → 4.5 (110006 reseñas)
+2026-06-30 21:52:58 | INFO     | Histórico actualizado: output\history.csv (48 nuevos registros)
+2026-06-30 21:52:58 | INFO     | JSON generado para GitHub Pages: output\latest_ratings.json
+2026-06-30 21:52:58 | INFO     |   → successful: 43/48
+2026-06-30 21:52:58 | INFO     | ============================================================
+2026-06-30 21:52:58 | INFO     | Proceso completado exitosamente
+2026-06-30 21:52:58 | INFO     | Resultados en: output
+2026-06-30 21:52:58 | INFO     |   - history.csv          → Histórico completo
+2026-06-30 21:52:58 | INFO     |   - latest_ratings.json  → Para GitHub Pages (usa este)
+2026-06-30 21:52:58 | INFO     | ============================================================
