@@ -1,0 +1,61 @@
+name: Update Trustpilot Ratings
+
+on:
+  schedule:
+    # Ejecutar todos los lunes a las 09:00 UTC (puedes cambiarlo)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:   # Permite ejecutarlo manualmente desde la pestaña Actions
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Necesario para hacer commit del JSON
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install chromium --with-deps
+
+      - name: Run Trustpilot Scraper
+        env:
+          # Opcional: Telegram notification desde Actions
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scraper_playwright.py \
+            --input input_urls.csv \
+            --output-dir output \
+            --notify-telegram
+
+      - name: Commit and push updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add output/latest_ratings.json output/history.csv output/*.json || true
+          
+          if git diff --staged --quiet; then
+            echo "No hay cambios para commitear"
+          else
+            git commit -m "🔄 Actualizar calificaciones Trustpilot [$(date '+%Y-%m-%d')]"
+            git push
+          fi
+
+      - name: Summary
+        run: |
+          echo "✅ Scraper ejecutado correctamente"
+          echo "📄 latest_ratings.json actualizado"
+          echo "📊 history.csv actualizado"
