@@ -1,8 +1,38 @@
 {
-  "last_updated": "2026-07-02T23:38:41.947469+00:00",
-  "total_sites": 36,
-  "successful": 36,
+  "last_updated": "2026-07-02T23:53:44.703489+00:00",
+  "total_sites": 39,
+  "successful": 38,
   "ratings": [
+    {
+      "url": "https://www.trustpilot.com/review/sweatco.in",
+      "domain": "sweatco.in",
+      "trust_score": 3.4,
+      "numero_reviews": 5746,
+      "estrellas": 3.5,
+      "nombre": "Sweatcoin",
+      "status": "ok",
+      "last_checked": "2026-07-02T23:53:44.703295+00:00"
+    },
+    {
+      "url": "https://www.trustpilot.com/review/weward.com",
+      "domain": "weward.com",
+      "trust_score": null,
+      "numero_reviews": null,
+      "estrellas": null,
+      "nombre": null,
+      "status": "no_data",
+      "last_checked": "2026-07-02T23:53:44.703318+00:00"
+    },
+    {
+      "url": "https://www.trustpilot.com/review/www.macadam.app",
+      "domain": "www.macadam.app",
+      "trust_score": 4.7,
+      "numero_reviews": 14032,
+      "estrellas": 4.5,
+      "nombre": "Macadam",
+      "status": "ok",
+      "last_checked": "2026-07-02T23:53:44.703324+00:00"
+    },
     {
       "url": "https://www.trustpilot.com/review/evidation.com",
       "domain": "evidation.com",
@@ -11,7 +41,7 @@
       "estrellas": 2,
       "nombre": "evidation.com",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947295+00:00"
+      "last_checked": "2026-07-02T23:53:44.703328+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/freecash.com",
@@ -21,7 +51,7 @@
       "estrellas": 4.5,
       "nombre": "Freecash.com",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947317+00:00"
+      "last_checked": "2026-07-02T23:53:44.703333+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/outlier.ai",
@@ -31,7 +61,7 @@
       "estrellas": 4,
       "nombre": "Outlier",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947323+00:00"
+      "last_checked": "2026-07-02T23:53:44.703338+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/remotasks.com",
@@ -41,7 +71,7 @@
       "estrellas": 2,
       "nombre": "Remotasks",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947328+00:00"
+      "last_checked": "2026-07-02T23:53:44.703342+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/neevo.ai",
@@ -51,7 +81,7 @@
       "estrellas": 2,
       "nombre": "Neevo",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947333+00:00"
+      "last_checked": "2026-07-02T23:53:44.703349+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/babel.audio",
@@ -61,7 +91,7 @@
       "estrellas": 4,
       "nombre": "Babel Audio",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947339+00:00"
+      "last_checked": "2026-07-02T23:53:44.703354+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.fiverr.com",
@@ -71,7 +101,7 @@
       "estrellas": 2.5,
       "nombre": "Fiverr",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947345+00:00"
+      "last_checked": "2026-07-02T23:53:44.703359+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.foap.com",
@@ -81,7 +111,7 @@
       "estrellas": 2.5,
       "nombre": "Foap",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947350+00:00"
+      "last_checked": "2026-07-02T23:53:44.703363+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/mistplay.com",
@@ -91,7 +121,7 @@
       "estrellas": 4,
       "nombre": "Mistplay",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947360+00:00"
+      "last_checked": "2026-07-02T23:53:44.703394+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/playtestcloud.com",
@@ -101,7 +131,7 @@
       "estrellas": 4.5,
       "nombre": "PlaytestCloud Playtesters App",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947366+00:00"
+      "last_checked": "2026-07-02T23:53:44.703399+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/attapoll.app",
@@ -111,7 +141,7 @@
       "estrellas": 2,
       "nombre": "Attapoll",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947371+00:00"
+      "last_checked": "2026-07-02T23:53:44.703404+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/5surveys.com",
@@ -121,7 +151,7 @@
       "estrellas": 1.5,
       "nombre": "5surveys",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947375+00:00"
+      "last_checked": "2026-07-02T23:53:44.703410+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/cashwalk.us",
@@ -131,7 +161,7 @@
       "estrellas": 1.5,
       "nombre": "Cashwalk",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947379+00:00"
+      "last_checked": "2026-07-02T23:53:44.703415+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/earnapp.com",
@@ -141,7 +171,7 @@
       "estrellas": 4.5,
       "nombre": "Earnapp",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947384+00:00"
+      "last_checked": "2026-07-02T23:53:44.703420+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/honeygain.com",
@@ -151,7 +181,7 @@
       "estrellas": 4.5,
       "nombre": "Honeygain",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947388+00:00"
+      "last_checked": "2026-07-02T23:53:44.703424+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.mobilexpression.com",
@@ -161,7 +191,7 @@
       "estrellas": 2,
       "nombre": "Mobilexpression",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947393+00:00"
+      "last_checked": "2026-07-02T23:53:44.703428+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/pawns.app",
@@ -171,7 +201,7 @@
       "estrellas": 4.5,
       "nombre": "Pawns.app",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947398+00:00"
+      "last_checked": "2026-07-02T23:53:44.703433+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/googleopinionrewards.page.link",
@@ -181,7 +211,7 @@
       "estrellas": 3,
       "nombre": "googleopinionrewards.page.link",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947402+00:00"
+      "last_checked": "2026-07-02T23:53:44.703438+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/microsoftrewards.com",
@@ -191,7 +221,7 @@
       "estrellas": 1.5,
       "nombre": "microsoftrewards.com",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947405+00:00"
+      "last_checked": "2026-07-02T23:53:44.703442+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/usertesting.com",
@@ -201,17 +231,17 @@
       "estrellas": 4.5,
       "nombre": "UserTesting",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947407+00:00"
+      "last_checked": "2026-07-02T23:53:44.703448+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.prolific.com",
       "domain": "www.prolific.com",
       "trust_score": 4.5,
-      "numero_reviews": 14566,
+      "numero_reviews": 14564,
       "estrellas": 4.5,
       "nombre": "Prolific",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947409+00:00"
+      "last_checked": "2026-07-02T23:53:44.703451+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/clickworker.com",
@@ -221,7 +251,7 @@
       "estrellas": 2.5,
       "nombre": "clickworker",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947417+00:00"
+      "last_checked": "2026-07-02T23:53:44.703453+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/pineconeresearch.com",
@@ -231,7 +261,7 @@
       "estrellas": 1,
       "nombre": "Pinecone research",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947422+00:00"
+      "last_checked": "2026-07-02T23:53:44.703456+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.surveyjunkie.com",
@@ -241,7 +271,7 @@
       "estrellas": 3.5,
       "nombre": "Survey Junkie",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947427+00:00"
+      "last_checked": "2026-07-02T23:53:44.703459+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/respondent.io",
@@ -251,7 +281,7 @@
       "estrellas": 4,
       "nombre": "Respondent",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947431+00:00"
+      "last_checked": "2026-07-02T23:53:44.703461+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/userinterviews.com",
@@ -261,7 +291,7 @@
       "estrellas": 4,
       "nombre": "User Interviews",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947436+00:00"
+      "last_checked": "2026-07-02T23:53:44.703463+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/2captcha.com",
@@ -271,7 +301,7 @@
       "estrellas": 4,
       "nombre": "2captcha",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947440+00:00"
+      "last_checked": "2026-07-02T23:53:44.703465+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/yougov.com",
@@ -281,7 +311,7 @@
       "estrellas": 4.5,
       "nombre": "YouGov",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947446+00:00"
+      "last_checked": "2026-07-02T23:53:44.703467+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/surveys.gobranded.com",
@@ -291,7 +321,7 @@
       "estrellas": 4,
       "nombre": "Branded Surveys",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947449+00:00"
+      "last_checked": "2026-07-02T23:53:44.703469+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/heycash.com",
@@ -301,7 +331,7 @@
       "estrellas": 4,
       "nombre": "HeyCash",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947452+00:00"
+      "last_checked": "2026-07-02T23:53:44.703472+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.swagbucks.com",
@@ -311,7 +341,7 @@
       "estrellas": 4,
       "nombre": "Swagbucks",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947454+00:00"
+      "last_checked": "2026-07-02T23:53:44.703474+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/nielsen.com",
@@ -321,7 +351,7 @@
       "estrellas": 3.5,
       "nombre": " Nielsen Computer & Mobile Panel",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947457+00:00"
+      "last_checked": "2026-07-02T23:53:44.703476+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/www.mypoints.com",
@@ -331,7 +361,7 @@
       "estrellas": 4,
       "nombre": "MyPoints.com",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947459+00:00"
+      "last_checked": "2026-07-02T23:53:44.703479+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/prizerebel.com",
@@ -341,7 +371,7 @@
       "estrellas": 4,
       "nombre": "PrizeRebel",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947462+00:00"
+      "last_checked": "2026-07-02T23:53:44.703482+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/justplayapps.com",
@@ -351,7 +381,7 @@
       "estrellas": 3.5,
       "nombre": "JustPlay",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947464+00:00"
+      "last_checked": "2026-07-02T23:53:44.703484+00:00"
     },
     {
       "url": "https://www.trustpilot.com/review/jumptask.io",
@@ -361,7 +391,7 @@
       "estrellas": 4,
       "nombre": "JumpTask",
       "status": "ok",
-      "last_checked": "2026-07-02T23:38:41.947466+00:00"
+      "last_checked": "2026-07-02T23:53:44.703486+00:00"
     }
   ]
 }
