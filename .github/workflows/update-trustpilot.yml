@@ -36,7 +36,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
           python scraper_playwright.py \
-            --input input_urls_example.csv \
+            --input input_urls.csv \
             --output-dir output \
             --notify-telegram
 
